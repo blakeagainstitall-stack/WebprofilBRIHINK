@@ -1,135 +1,188 @@
-<!-- Container Utama -->
-<div class="max-w-4xl mx-auto my-10 bg-white shadow-xl rounded-2xl overflow-hidden border border-slate-100">
-    
-    <!-- Header / Banner Profil -->
-    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-white relative">
-        <div class="flex flex-col md:flex-row items-center gap-6">
-            <!-- Foto Profil -->
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" 
-                     alt="Foto Alvian Nur Raditia" 
-                     class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md">
-                <span class="absolute bottom-1 right-1 bg-green-500 w-5 h-5 rounded-full border-2 border-white" title="Aktif Bekerja"></span>
-            </div>
-            
-            <!-- Informasi Singkat -->
-            <div class="text-center md:text-left">
-                <h1 class="text-3xl font-bold">Alvian Nur Raditia</h1>
-                <p class="text-blue-100 text-lg font-medium mt-1">Senior Full Stack Developer</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-3 text-sm text-blue-100">
-                    <span><i class="fa-solid fa-location-dot mr-1"></i> South Kalimantan, Indonesia</span>
-                    <span><i class="fa-solid fa-envelope mr-1"></i> alvian.nurraditia@email.com</span>
-                    <span><i class="fa-solid fa-phone mr-1"></i> +62 812-3456-7890</span>
-                </div>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Profesional - Jurnalis & Peneliti</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #16a085;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #777777;
+        }
 
-    <!-- Konten Utama -->
-    <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Kolom Kiri: Keahlian & Kontak -->
-        <div class="md:col-span-1 space-y-6">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+        }
+
+        .about-text {
+            color: var(--text-color);
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #eef2f3;
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-item h3 {
+            font-size: 1.05rem;
+            color: var(--primary-color);
+        }
+
+        .experience-item span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f1f3f5;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Header / Identitas Utama -->
+        <div class="header">
+            <h1>Alvian Nur Raditia</h1>
+            <p>Jurnalis Independen & Peneliti Lapangan</p>
+        </div>
+
+        <!-- Bagian Konten Utama -->
+        <div class="content">
+            
             <!-- Tentang Saya -->
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-user text-blue-600"></i> Tentang Saya
-                </h2>
-                <p class="text-sm text-slate-600">
-                    Seorang pengembang perangkat lunak berpengalaman lebih dari 5 tahun dalam merancang, membangun, dan memelihara aplikasi web skala besar. Berfokus pada performa, keamanan, dan pengalaman pengguna yang optimal.
+            <div class="section">
+                <h2>Tentang Saya</h2>
+                <p class="about-text">
+                    Seorang profesional yang berdedikasi tinggi di bidang investigasi dan penulisan laporan mendalam. Memiliki ketertarikan kuat dalam penjelajahan global, pengumpulan data akurat, serta menggali cerita-cerita bermakna langsung dari narasumber di lapangan demi menyajikan informasi yang objektif dan tepercaya kepada publik.
                 </p>
-            </section>
+            </div>
 
             <!-- Keahlian -->
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-code text-blue-600"></i> Keahlian
-                </h2>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">JavaScript (ES6+)</span>
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">React.js</span>
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">Node.js</span>
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">Tailwind CSS</span>
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">PostgreSQL</span>
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">Docker</span>
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">Git & GitHub</span>
-                </div>
-            </section>
-
-            <!-- Bahasa -->
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-language text-blue-600"></i> Bahasa
-                </h2>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li class="flex justify-between"><span>Indonesia</span> <span class="font-medium text-slate-800">Penutur Asli</span></li>
-                    <li class="flex justify-between"><span>Inggris</span> <span class="font-medium text-slate-800">Profesional Menengah</span></li>
+            <div class="section">
+                <h2>Keahlian Profesional</h2>
+                <ul class="skills-list">
+                    <li>Jurnalisme Investigasi</li>
+                    <li>Wawancara Mendalam</li>
+                    <li>Penulisan Narasi & Artikel</li>
+                    <li>Analisis Informasi & Riset</li>
+                    <li>Manajemen Proyek Kreatif</li>
                 </ul>
-            </section>
+            </div>
+
+            <!-- Pengalaman / Riwayat Singkat -->
+            <div class="section">
+                <h2>Pengalaman Utama</h2>
+                <div class="experience-item">
+                    <h3>Jurnalis Investigasi Independen</h3>
+                    <span>2024 - Sekarang</span>
+                    <p>Melakukan peliputan lapangan, menyusun laporan investigasi mendalam, serta berkolaborasi dengan berbagai narasumber untuk mempublikasikan kisah-kisah faktual.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Penulis Konten & Editor Narasi</h3>
+                    <span>2022 - 2024</span>
+                    <p>Mengembangkan struktur cerita, menyunting naskah artikel, serta memastikan kualitas narasi tetap terjaga dan menarik bagi pembaca.</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Kolom Kanan: Pengalaman & Pendidikan -->
-        <div class="md:col-span-2 space-y-6">
-            <!-- Pengalaman Kerja -->
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-briefcase text-blue-600"></i> Pengalaman Kerja
-                </h2>
-                
-                <div class="space-y-6">
-                    <!-- Pekerjaan 1 -->
-                    <div class="relative pl-6 border-l-2 border-blue-200">
-                        <span class="absolute -left-[9px] top-0.5 w-4 h-4 rounded-full bg-blue-600 border-2 border-white"></span>
-                        <h3 class="font-bold text-slate-900">Senior Full Stack Developer</h3>
-                        <p class="text-sm text-blue-600 font-medium">PT Teknologi Nusantara Jaya • 2022 - Sekarang</p>
-                        <p class="text-sm text-slate-600 mt-2">
-                            Memimpin tim beranggotakan 4 orang dalam mengembangkan aplikasi SaaS berbasis cloud. Mengoptimalkan performa kueri database yang memangkas waktu muat halaman hingga 40%.
-                        </p>
-                    </div>
-
-                    <!-- Pekerjaan 2 -->
-                    <div class="relative pl-6 border-l-2 border-slate-200">
-                        <span class="absolute -left-[9px] top-0.5 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></span>
-                        <h3 class="font-bold text-slate-900">Frontend Developer</h3>
-                        <p class="text-sm text-blue-600 font-medium">PT Solusi Digital Kreasi • 2020 - 2022</p>
-                        <p class="text-sm text-slate-600 mt-2">
-                            Mengembangkan antarmuka pengguna interaktif menggunakan React.js dan Redux. Bekerja sama erat dengan tim UI/UX untuk mengimplementasikan desain komponen yang konsisten.
-                        </p>
-                    </div>
-
-                    <!-- Pekerjaan 3 -->
-                    <div class="relative pl-6 border-l-2 border-slate-200">
-                        <span class="absolute -left-[9px] top-0.5 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></span>
-                        <h3 class="font-bold text-slate-900">Junior Web Developer</h3>
-                        <p class="text-sm text-blue-600 font-medium">CV Mandiri Code • 2018 - 2020</p>
-                        <p class="text-sm text-slate-600 mt-2">
-                            Membangun dan memelihara berbagai situs web klien menggunakan HTML, CSS, JavaScript, dan PHP. Mengelola pembaruan rutin dan perbaikan bug.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pendidikan -->
-            <section class="mt-8">
-                <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Pendidikan
-                </h2>
-                
-                <div class="space-y-4">
-                    <div class="relative pl-6 border-l-2 border-slate-200">
-                        <span class="absolute -left-[9px] top-0.5 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></span>
-                        <h3 class="font-bold text-slate-900">S1 Teknik Informatika</h3>
-                        <p class="text-sm text-blue-600 font-medium">Universitas Indonesia • 2014 - 2018</p>
-                        <p class="text-sm text-slate-600 mt-1">Lulus dengan predikat Cum Laude (IPK 3.75). Aktif dalam organisasi kemahasiswaan pemrograman.</p>
-                    </div>
-                </div>
-            </section>
+        <!-- Bagian Footer / Kontak -->
+        <div class="footer">
+            <p>Kontak: alvian@email.com | Lokasi: Kalimantan Selatan, Indonesia</p>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="bg-slate-100 px-8 py-4 text-center text-xs text-slate-500 border-t border-slate-200">
-        &copy; 2026 Alvian Nur Raditia. Dibuat dengan format HTML & Tailwind CSS.
-    </div>
-
-</div>
+</body>
+</html>
